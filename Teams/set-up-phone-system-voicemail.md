@@ -96,7 +96,7 @@ The following information is about configuring Cloud Voicemail to work with Team
 
 When someone leaves a voicemail message for a user in your organization, the voicemail is delivered to the user's mailbox as an email message attachment.
 
-Using Microsoft Purview Information Protection, you can encrypt the voicemail messages left by both internal and external callers. You can also prevent the user from  forwarding these messages. This feature is supported for users with Exchange Online mailboxes.
+Using Microsoft Purview Information Protection, you can encrypt the voicemail messages left by both internal and external callers. You can also prevent the user from  forwarding these messages. This feature is supported for users with Exchange Online mailboxes. In addition tot he steps below Azure Rights Management service must be running. https://docs.microsoft.com/en-us/azure/information-protection/activate-service#how-to-activate-or-confirm-the-status-of-the-protection-service
 
 To encrypt the voicemail message, you can create a sensitivity label. With the auto-labeling feature, you can ensure that the label will be applied automatically to incoming voicemail messages.
 
@@ -115,7 +115,7 @@ To create the auto-labeling policy to apply a sensitivity label to voicemail, se
 - Exchange rules:
   - Conditions:
     - **Header matches pattern**: Content-Class = Voice-CA
-    - **Sender IP address is**: 13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14, 52.238.119.141/32, 52.244.160.207/32
+    - **Sender IP address is**: 13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2603:1063::/38, 2620:1ec:6::/48, 2620:1ec:40::/42
 
 - For **Choose a label to auto-apply**, select the sensitivity label you created for voicemail in the step above.
 
